@@ -1,0 +1,144 @@
+<resources>
+    <string name="app_name">Walk Wallet</string>
+
+    <string name="next_step">Next</string>
+    <string name="complete">Complete</string>
+    <string name="clear">Clear</string>
+    <string name="official_warning">Officials Hint</string>
+    <string name="scan_tip">Align QR code within frame to scan</string>
+    <string name="welcome_use">Welcome to WALK WALLET</string>
+    <string name="welcome_tips">Please create a wallet first, or import a wallet</string>
+    <string name="confirm">Confirm</string>
+    <string name="password_input">Enter Password</string>
+    <string name="password_input_tips">Please enter the password of the wallet</string>
+    <string name="password_wrong">Password Error</string>
+    <string name="copy_right">2018 V SYSTEMS ALL rights reserved</string>
+    <string name="grant_permissions">Please grant all permissions</string>
+    <string name="version">Version %1$s</string>
+    <string name="wallet_info">Walk Wallet Cold is reference implementation of high security cold storage for the V SYSTEMS blockchain network.It implements VSYS wallet format specification 1.0</string>
+    <string name="not_office_seed_title"> Unofficial mnemonic detected</string>
+    <string name="not_office_seed_tips">Mnemonic words from unknown sources can completely lose your assets. Still using the mnemonic?</string>
+    <string name="cancel">Cancel</string>
+    <string name="text_continue">Continue</string>
+    <string name="password_repeat_error">Passwords do not match</string>
+    <string name="at_least_8_word">Password should contain at least 8 characters</string>
+    <string name="log_out_wallet_title">Write out the wallet</string>
+    <string name="log_out_wallet_tips">Have you recorded your wallet Recovery phrase?\nWithout this you will not be able to sign back in to your account.</string>
+    <string name="continue_input">Continue</string>
+    <string name="qr_cod_tips">(only for verifying when make transactions)</string>
+
+    <!--settings start-->
+    <string name="setting_label">Settings</string>
+    <string name="setting_wallet_manage">Wallet management</string>
+    <string name="setting_backup_word">Back up mnemonic</string>
+    <string name="setting_back_up_now">Back up now</string>
+    <string name="setting_auto_backup">Auto back up</string>
+    <string name="setting_auto_backup_tips">Auotomatically back up changes to wallet</string>
+    <string name="setting_safety_manage">Security management</string>
+    <string name="setting_network_monitor">Monitor connectivity</string>
+    <string name="setting_network_monitor_tips">Check for WiFi，data，and bluetooth</string>
+    <string name="setting_others">Others</string>
+    <string name="setting_about_us">About us</string>
+    <string name="setting_logout">Write off the wallet</string>
+    <!--settings end-->
+
+    <!--wallet start-->
+    <string name="wallet_my_wallet">Wallet</string>
+    <string name="wallet_backup">Back up wallet</string>
+    <string name="wallet_backup_later">Back up later</string>
+    <string name="wallet_create">Create wallet</string>
+    <string name="wallet_import">Import wallet</string>
+    <string name="wallet_word_import">Import with mnemonic words</string>
+    <string name="wallet_backup_word_import">Import native backup</string>
+    <string name="wallet_backup_word_import_tips">1 backup wallet detected</string>
+    <string name="wallet_label">Wallet</string>
+    <string name="wallet_add_more_account">Add more account</string>
+    <string name="wallet_no_backup_tips">Local backup not found, please import with mnemonic</string>
+    <!--wallet end-->
+
+    <!--wallet create start-->
+    <string name="wallet_set_password">Set password</string>
+    <string name="wallet_create_tips">Walk Wallet does not store your password.It cannot be recovered if forgotten.Please keep it properly</string>
+    <string name="wallet_create_password_label">Craeate wallet password</string>
+    <string name="wallet_create_password_tips">Please input at least 8 characters</string>
+    <string name="wallet_create_confirm_password_label">Confirm wallet password</string>
+    <string name="wallet_create_confirm_password_tips">Please input</string>
+    <string name="wallet_create_password_weak_label">Password strength is too weak</string>
+    <string name="wallet_create_password_weak_tips">For your wallet security, password strength should be at least "good"</string>
+    <string name="wallet_reset_password">Reset Password</string>
+    <string name="wallet_continue_create">Complete creation</string>
+    <string name="password_strength_0"> </string>
+    <string name="password_strength_1">Weak</string>
+    <string name="password_strength_2">Fair</string>
+    <string name="password_strength_3">Good</string>
+    <string name="password_strength_4">Strong</string>
+    <string name="password_strength_5">Perfect</string>
+    <string name="wallet_number">Account %1$d</string>
+    <string name="wallet_address">Account %1$d Address</string>
+    <string name="wallet_password_create_success_label">Successful created</string>
+    <string name="wallet_password_create_success_tips">We strongly recommend backing up your wallet now.</string>
+    <!--wallet create end-->
+
+    <!--seed start-->
+    <string name="word_import_label">Mnemonic words consist of 15 words, please pay attention to the input space separated</string>
+    <string name="word_import_hint">Please input</string>
+    <string name="word_backup_tips">Screenshots are not safe and your images may be used by other applications. Please use pen and paper to copy the following mnemonic words and save them properly. We will confirm on the next screen</string>
+    <string name="word_confirm">I have saved them orderly</string>
+    <string name="word_backup_success">Successfully backed up</string>
+    <string name="word_backup_success_tips">Please keep your mnemonic words carefully</string>
+    <string name="word_input_in_order">Click on the mnemonic words orderly to confirm.</string>
+    <string name="word_backup_word">Back up mnemonics</string>
+    <!--seed end-->
+
+    <!-- scan start -->
+    <string name="sender_not_found">Sender not found</string>
+    <string name="unsupported_qrcode">Unsupported QR code types</string>
+    <!-- scan end -->
+
+    <!--confirm transaction start-->
+    <string name="confirmtx_title">Review Transaction</string>
+    <string name="confirmtx_tip">Please check the following transaction information carefully</string>
+    <string name="confirmtx_item_my_address">From</string>
+    <string name="confirmtx_item_send_to">To</string>
+    <string name="confirmtx_item_lease_to">To</string>
+    <string name="confirmtx_item_type">Type</string>
+    <string name="confirmtx_item_amount">Amount</string>
+    <string name="confirmtx_item_fee">Fee</string>
+    <string name="confirmtx_item_time">Time</string>
+    <string name="confirmtx_item_attachment">Description</string>
+    <string name="confirmtx_dialog_title">Validate transaction</string>
+    <string name="confirmtx_dialog_tip">Scan QR coda via Hot Wallet to validate signature</string>
+    <!--confirm transaction end-->
+
+    <!-- home start-->
+    <string name="home_add_account_dialog_title">Add a new account</string>
+    <string name="home_add_account_dialog_msg">You will add a new account that cannot be deleted. Are you sure to add?</string>
+    <!-- home end -->
+
+    <!--network start-->
+    <string name="network_environment">Network</string>
+    <string name="network_warning">After the wallet is successfully created, the network cannot be changed</string>
+    <string name="network_main_net">Mainnet</string>
+    <string name="network_test_net">Testnet</string>
+    <string name="network_main_net_caption">Under the formal network environment, users can safely store the real assets of VSYS. This environment is suitable for ordinary users\' daily use.</string>
+    <string name="network_test_net_caption">Under the test network environment, users are not allowed to store the real assets of VSYS safely. This environment is suitable for developers to do simulation test. If you are not a professional developer, you are recommended to use the formal environment</string>
+    <string name="network_switch_to_test_net">Click to switch to the developer test environment</string>
+    <string name="network_switch_to_main_net">Click to switch back to the formal environment</string>
+    <string name="network_switch_warning">The test environment is only available for developers to test. Are you sure you want to use it?</string>
+    <!--network end-->
+
+    <!--monitor start-->
+    <string name="monitor_title">Network connection monitoring</string>
+    <string name="monitor_caption">In the case of network data connection, your cold wallet may be at great risk of being stolen by criminals, in order to ensure the safety of your personal property, please be sure to shut down all the data network for use</string>
+    <string name="monitor_wifi">WIFI</string>
+    <string name="monitor_mobile_data">Mobile Data</string>
+    <string name="monitor_bluetooth">Bluetooth</string>
+    <string name="monitor_recheck">Refresh</string>
+    <string name="monitor_connected">Connected</string>
+    <string name="monitor_unconnected">Unconnected</string>
+    <!--monitor end-->
+
+    <!--init start-->
+    <string name="wallet_init_official_warning_dialog_msg">To ensure the security of your personal property, please make sure that your wallet APP is downloaded from systems, the official website of VSYS</string>
+    <!--init end-->
+</resources>

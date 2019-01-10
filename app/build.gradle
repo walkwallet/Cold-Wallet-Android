@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion versions.target_sdk
+    defaultConfig {
+        applicationId "systems.v.wallet.cold"
+        minSdkVersion versions.min_sdk
+        targetSdkVersion versions.target_sdk
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    lintOptions {
+        disable 'GoogleAppIndexingWarning'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation deps.support.appcompat
+    implementation deps.support.material
+    implementation deps.constraintlayout
+    implementation deps.vectordrawable
+    testImplementation deps.junit
+    androidTestImplementation deps.atsl.runner
+    androidTestImplementation deps.espresso.core
+    implementation deps.fastjson
+    implementation deps.zxcvbn
+    implementation deps.zxing_android_embedded
+    implementation deps.boucnycastle
+    implementation deps.flexbox
+    implementation deps.autofittextview
+    implementation project(':basic')
+}

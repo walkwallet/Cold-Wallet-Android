@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_common"
+            android:orientation="vertical"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginStart="@dimen/normal_padding"
+                android:text="@string/setting_label"
+                android:textColor="@color/text_strong"
+                android:textSize="28sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:paddingStart="@dimen/normal_padding"
+                android:text="@string/setting_wallet_manage"
+                android:textColor="@color/text_weak"
+                android:textSize="14sp" />
+
+            <systems.v.coldwallet.ui.widget.CommonItem
+                android:id="@+id/ci_backup"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/ripple_white"
+                android:divider="@color/divider"
+                app:common_item_divider_enabled="true"
+                app:common_item_left_icon="@drawable/ico_backup_word"
+                app:common_item_left_text="@string/setting_backup_word"
+                app:common_item_left_text_text_size="16sp"
+                app:common_item_right_icon="@drawable/ico_chevron_right"
+                app:common_item_right_text="@string/setting_back_up_now"
+                app:common_item_right_text_text_color="@color/color_orange"
+                app:common_item_right_text_text_size="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/normal_padding"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/ico_backup_auto" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/setting_auto_backup"
+                        android:textColor="@color/text_strong"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/setting_auto_backup_tips"
+                        android:textColor="@color/text_weak"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/switch_backup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="@dimen/normal_padding"
+                    android:gravity="center_vertical"
+                    android:thumb="@drawable/switch_thumb"
+                    android:track="@drawable/switch_track" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/normal_padding"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="@dimen/normal_padding"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:paddingStart="@dimen/normal_padding"
+                android:text="@string/setting_safety_manage"
+                android:textColor="@color/text_weak"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/normal_padding"
+                android:paddingTop="8dp">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/ico_monitor" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/setting_network_monitor"
+                        android:textColor="@color/text_strong"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/setting_network_monitor_tips"
+                        android:textColor="@color/text_weak"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/switch_network"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|end"
+                    android:layout_marginEnd="@dimen/normal_padding"
+                    android:gravity="center_vertical"
+                    android:thumb="@drawable/switch_thumb"
+                    android:track="@drawable/switch_track" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/normal_padding"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/normal_padding"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:paddingStart="@dimen/normal_padding"
+                android:text="@string/setting_others"
+                android:textColor="@color/text_weak"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="@dimen/normal_padding"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="@dimen/normal_padding"
+                android:background="@color/divider" />
+
+            <systems.v.coldwallet.ui.widget.CommonItem
+                android:id="@+id/ci_network"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/ripple_white"
+                android:divider="@color/divider"
+                app:common_item_divider_enabled="true"
+                app:common_item_left_icon="@drawable/ico_web"
+                app:common_item_left_text="@string/network_environment"
+                app:common_item_left_text_text_size="16sp"
+                app:common_item_right_text_text_size="14sp" />
+
+            <systems.v.coldwallet.ui.widget.CommonItem
+                android:id="@+id/ci_about"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/ripple_white"
+                android:divider="@color/divider"
+                app:common_item_divider_enabled="true"
+                app:common_item_left_icon="@drawable/ico_about"
+                app:common_item_left_text="@string/setting_about_us"
+                app:common_item_left_text_text_size="16sp"
+                app:common_item_right_icon="@drawable/ico_chevron_right"
+                app:common_item_right_text_text_size="14sp" />
+
+
+            <systems.v.coldwallet.ui.widget.CommonItem
+                android:id="@+id/ci_log_out"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/ripple_white"
+                android:divider="@color/divider"
+                app:common_item_divider_enabled="true"
+                app:common_item_left_icon="@drawable/ico_cancel"
+                app:common_item_left_text="@string/setting_logout"
+                app:common_item_left_text_text_color="@color/text_strong"
+                app:common_item_left_text_text_size="16sp"
+                app:common_item_right_text_text_size="14sp" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

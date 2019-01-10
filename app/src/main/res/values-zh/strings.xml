@@ -1,0 +1,144 @@
+<resources>
+    <string name="app_name">Walk Wallet</string>
+
+    <string name="next_step">下一步</string>
+    <string name="complete">完成</string>
+    <string name="clear">清空</string>
+    <string name="official_warning">官方提示</string>
+    <string name="scan_tip">将二维码放入框内，即可自动扫描</string>
+    <string name="welcome_use">欢迎使用WALK WALLET</string>
+    <string name="welcome_tips">请先创建钱包，或导入钱包</string>
+    <string name="confirm">确认</string>
+    <string name="password_input">输入密码</string>
+    <string name="password_input_tips">请输入已设置的钱包密码</string>
+    <string name="password_wrong">密码错误</string>
+    <string name="copy_right">2018 V SYSTEMS ALL rights reserved</string>
+    <string name="grant_permissions">请同意全部权限申请</string>
+    <string name="version">Version %1$s</string>
+    <string name="wallet_info">Walk Wallet Cold是参考V SYSTEMS区块链网络，而实现的一款高安全性的冷钱包。它实现了VSYS钱包格式规范1.0。</string>
+    <string name="not_office_seed_title">检测到非官方来源的助记词</string>
+    <string name="not_office_seed_tips">这是一个非官方来源的助记词，未知来源的助记词可能使您的资产完全丢失。仍然使用该助记词？</string>
+    <string name="cancel">取消</string>
+    <string name="text_continue">继续</string>
+    <string name="password_repeat_error">两次密码输入不一致</string>
+    <string name="at_least_8_word">至少8个字符</string>
+    <string name="log_out_wallet_title">注销钱包</string>
+    <string name="log_out_wallet_tips">注销钱包前，请您务必确认是否已记录好助记词，钱包一经注销，没有助记词将无法找回！</string>
+    <string name="continue_input">重新输入</string>
+    <string name="qr_cod_tips">（此地址仅供您转账时核对信息）</string>
+
+    <!--settings start-->
+    <string name="setting_label">设置</string>
+    <string name="setting_wallet_manage">钱包管理</string>
+    <string name="setting_backup_word">备份助记词</string>
+    <string name="setting_back_up_now">立即备份</string>
+    <string name="setting_auto_backup">自动备份</string>
+    <string name="setting_auto_backup_tips">在账户发生变化时自动备份</string>
+    <string name="setting_safety_manage">安全管理</string>
+    <string name="setting_network_monitor">网络连接监控</string>
+    <string name="setting_network_monitor_tips">检测Wifi, 移动数据和蓝牙</string>
+    <string name="setting_others">其他</string>
+    <string name="setting_about_us">关于我们</string>
+    <string name="setting_logout">注销钱包</string>
+    <!--settings end-->
+
+    <!--wallet start-->
+    <string name="wallet_my_wallet">我的钱包</string>
+    <string name="wallet_backup">备份钱包</string>
+    <string name="wallet_backup_later">稍后备份</string>
+    <string name="wallet_create">创建钱包</string>
+    <string name="wallet_import">导入钱包</string>
+    <string name="wallet_word_import">助记词导入</string>
+    <string name="wallet_backup_word_import">本机备份导入</string>
+    <string name="wallet_backup_word_import_tips">检测到1个备份钱包</string>
+    <string name="wallet_label">钱包</string>
+    <string name="wallet_add_more_account">添加更多账户</string>
+    <string name="wallet_no_backup_tips">未找到本地备份文件，请使用助记词导入</string>
+    <!--wallet end-->
+
+    <!--wallet create start-->
+    <string name="wallet_set_password">设置密码</string>
+    <string name="wallet_create_tips">请牢记您的密码！Walk Wallet不存储用户密码，无法提供找回功能</string>
+    <string name="wallet_create_password_label">创建钱包密码</string>
+    <string name="wallet_create_password_tips">请输入至少8位字符</string>
+    <string name="wallet_create_confirm_password_label">确认钱包密码</string>
+    <string name="wallet_create_confirm_password_tips">请输入</string>
+    <string name="wallet_create_password_weak_label">密码强度太弱</string>
+    <string name="wallet_create_password_weak_tips">为了您的钱包安全，密码强度至少要在“好”以上</string>
+    <string name="wallet_reset_password">返回重设密码</string>
+    <string name="wallet_continue_create">继续完成创建</string>
+    <string name="password_strength_0"> </string>
+    <string name="password_strength_1">弱</string>
+    <string name="password_strength_2">一般</string>
+    <string name="password_strength_3">好</string>
+    <string name="password_strength_4">很好</string>
+    <string name="password_strength_5">完美</string>
+    <string name="wallet_number">钱包 %1$d</string>
+    <string name="wallet_address">钱包%1$d地址</string>
+    <string name="wallet_password_create_success_label">创建成功</string>
+    <string name="wallet_password_create_success_tips">钱包创建成功，请您务必保管好密码和助记词</string>
+    <!--wallet create end-->
+
+    <!--seed start-->
+    <string name="word_import_label">助记词由15个英文单词组成，注意输入时用空格分开</string>
+    <string name="word_import_hint">请输入</string>
+    <string name="word_backup_tips">截图是不安全的，你的图片可能被别的应用使用。请使用笔和纸抄写如下助记词，并妥善保存，我们会在下个屏幕上确认</string>
+    <string name="word_confirm">已按顺序记下助记词</string>
+    <string name="word_backup_success">备份成功</string>
+    <string name="word_backup_success_tips">请妥善保管你的助记词</string>
+    <string name="word_input_in_order">按顺序点击助记词，确认你的助记词备份正确</string>
+    <string name="word_backup_word">备份助记词</string>
+    <!--seed end-->
+
+    <!-- scan start -->
+    <string name="sender_not_found">没有找到发送这笔交易的账户</string>
+    <string name="unsupported_qrcode">不支持的二维码类型</string>
+    <!-- scan end -->
+
+    <!--confirm transaction start-->
+    <string name="confirmtx_title">交易确认</string>
+    <string name="confirmtx_tip">请仔细核对以下的交易信息</string>
+    <string name="confirmtx_item_my_address">我的地址</string>
+    <string name="confirmtx_item_send_to">接收地址</string>
+    <string name="confirmtx_item_lease_to">租出地址</string>
+    <string name="confirmtx_item_type">类型</string>
+    <string name="confirmtx_item_amount">数量</string>
+    <string name="confirmtx_item_fee">手续费</string>
+    <string name="confirmtx_item_time">时间</string>
+    <string name="confirmtx_item_attachment">备注</string>
+    <string name="confirmtx_dialog_title">交易验证</string>
+    <string name="confirmtx_dialog_tip">使用热钱包扫描二维码验证签名</string>
+    <!--confirm transaction end-->
+
+    <!-- home start-->
+    <string name="home_add_account_dialog_title">添加新的账户</string>
+    <string name="home_add_account_dialog_msg">您将在钱包内添加一个新的账户，该账户一旦创建无法删除。是否确认添加？</string>
+    <!-- home end -->
+
+    <!--network start-->
+    <string name="network_environment">网络环境</string>
+    <string name="network_warning">成功创建钱包后，网络环境将不能进行修改</string>
+    <string name="network_main_net">正式环境</string>
+    <string name="network_test_net">测试环境</string>
+    <string name="network_main_net_caption">在正式网络环境下，用户可进行VSYS现实资产的安全存储，此环境适用于普通用户日常使用</string>
+    <string name="network_test_net_caption">在测试网络环境下，用户不可进行VSYS真实资产的安全存储，此环境适用于开发者做模拟测试使用，若非专业开发者，建议您使用正式环境</string>
+    <string name="network_switch_to_test_net">切换至开发者测试环境</string>
+    <string name="network_switch_to_main_net">切换至普通用户正式环境</string>
+    <string name="network_switch_warning">测试环境仅提供给开发者做测试，您是否确认使用?</string>
+    <!--network end-->
+
+    <!--monitor start-->
+    <string name="monitor_title">网络连接监控</string>
+    <string name="monitor_caption">在网络数据连接的情况下，您的冷钱包极大可能面临着被不法分子盗取的风险，为保证您的个人财产安全，请您务必在关闭所有数据网络的情况下进行使用</string>
+    <string name="monitor_wifi">WIFI</string>
+    <string name="monitor_mobile_data">移动数据</string>
+    <string name="monitor_bluetooth">蓝牙</string>
+    <string name="monitor_recheck">重新检测</string>
+    <string name="monitor_connected">已连接</string>
+    <string name="monitor_unconnected">未连接</string>
+    <!--monitor end-->
+
+    <!--init start-->
+    <string name="wallet_init_official_warning_dialog_msg">为保证您的个人财产安全，请务必确保您的钱包APP来自VSYS官方网站v.systems下载</string>
+    <!--init end-->
+</resources>

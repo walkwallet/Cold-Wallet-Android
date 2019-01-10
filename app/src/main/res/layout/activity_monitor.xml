@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_common"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_network_tips"
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            android:layout_marginTop="64dp"
+            android:src="@drawable/ico_monitor_unsafe" />
+
+        <me.grantland.widget.AutofitTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/monitor_title"
+            android:textColor="@color/text_strong"
+            android:textSize="28sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="center"
+            android:text="@string/monitor_caption"
+            android:textColor="@color/text_strong"
+            android:textSize="14sp" />
+
+        <systems.v.coldwallet.ui.widget.CommonItem
+            android:id="@+id/ci_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            app:common_item_divider_enabled="true"
+            app:common_item_left_text="@string/monitor_wifi"
+            app:common_item_left_text_text_size="16sp"
+            app:common_item_right_text_text_size="14sp" />
+
+        <systems.v.coldwallet.ui.widget.CommonItem
+            android:id="@+id/ci_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:common_item_divider_enabled="true"
+            app:common_item_left_text="@string/monitor_mobile_data"
+            app:common_item_left_text_text_size="16sp"
+            app:common_item_right_text_text_size="14sp" />
+
+        <systems.v.coldwallet.ui.widget.CommonItem
+            android:id="@+id/ci_bluetooth"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:common_item_divider_enabled="true"
+            app:common_item_left_text="@string/monitor_bluetooth"
+            app:common_item_left_text_text_size="16sp"
+            app:common_item_right_text_text_size="14sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_recheck"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="@dimen/normal_padding"
+            android:layout_marginEnd="@dimen/normal_padding"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_orange_radius_6"
+            android:gravity="center"
+            android:text="@string/monitor_recheck"
+            android:textColor="@color/text_strong"
+            android:textSize="16sp" />
+    </LinearLayout>
+</layout>
