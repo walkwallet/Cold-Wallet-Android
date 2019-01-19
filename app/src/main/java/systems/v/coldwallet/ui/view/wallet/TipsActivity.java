@@ -10,6 +10,7 @@ import android.view.View;
 import java.util.UUID;
 
 import androidx.databinding.DataBindingUtil;
+import systems.v.coldwallet.BuildConfig;
 import systems.v.coldwallet.R;
 import systems.v.coldwallet.databinding.ActivityTipsBinding;
 import systems.v.coldwallet.service.BackupService;
@@ -18,6 +19,7 @@ import systems.v.coldwallet.ui.view.main.MainActivity;
 import systems.v.coldwallet.utils.Constants;
 import systems.v.coldwallet.utils.SPUtils;
 import systems.v.wallet.basic.utils.FileUtil;
+import systems.v.wallet.basic.wallet.Agent;
 import systems.v.wallet.basic.wallet.Wallet;
 
 public class TipsActivity extends BaseActivity implements View.OnClickListener {
@@ -138,7 +140,8 @@ public class TipsActivity extends BaseActivity implements View.OnClickListener {
      */
     private void saveWallet(boolean launch) {
         String network = SPUtils.getString(Constants.NETWORK_ENVIRONMENT);
-        Wallet wallet = new Wallet(mSeed, network);
+        Agent agent = new Agent("Walk Wallet Cold", BuildConfig.VERSION_NAME, network);
+        Wallet wallet = new Wallet(mSeed, network, agent);
         wallet.setPassword(mPassword);
         wallet.setSalt(UUID.randomUUID().toString());
         wallet.append(1);
