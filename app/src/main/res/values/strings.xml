@@ -59,7 +59,7 @@
     <!--wallet create start-->
     <string name="wallet_set_password">Set password</string>
     <string name="wallet_create_tips">Walk Wallet does not store your password.It cannot be recovered if forgotten.Please keep it properly</string>
-    <string name="wallet_create_password_label">Craeate wallet password</string>
+    <string name="wallet_create_password_label">Create wallet password</string>
     <string name="wallet_create_password_tips">Please input at least 8 characters</string>
     <string name="wallet_create_confirm_password_label">Confirm wallet password</string>
     <string name="wallet_create_confirm_password_tips">Please input</string>
