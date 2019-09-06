@@ -1,0 +1,144 @@
+<resources>
+    <string name="app_name">워크 월렛</string>
+
+    <string name="next_step">다음</string>
+    <string name="complete">완료</string>
+    <string name="clear">완료</string>
+    <string name="official_warning">공식 힌트</string>
+    <string name="scan_tip">QR 코드를 프레임 내부에 정렬해 스캔</string>
+    <string name="welcome_use">워크 월렛에 오신 것을 환영합니다.</string>
+    <string name="welcome_tips">지갑을 생성하거나 불러오십시오.</string>
+    <string name="confirm">확인</string>
+    <string name="password_input">비밀번호 입력</string>
+    <string name="password_input_tips">지갑 비밀번호를 입력하십시오.</string>
+    <string name="password_wrong">비밀번호 오류</string>
+    <string name="copy_right">모든 저작권은 V SYSTEMS에 있습니다.</string>
+    <string name="grant_permissions">모든 권한을 부여하십시오.</string>
+    <string name="version">버전 %1$s</string>
+    <string name="wallet_info">Walk Wallet Cold는 V SYSTEMS 블록체인 네트워크를 위한 보안성이 높은 콜드 스토리지의 레퍼런스 구현입니다. VSYS 지갑 형식 규격 1.0을 구현합니다.</string>
+    <string name="not_office_seed_title"> 비정상적인 니모닉이 감지됐습니다.</string>
+    <string name="not_office_seed_tips">출처를 알 수 없는 니모닉 단어의 사용으로 당신의 자산이 완전히 분실될 수도 있습니다. 그래도 니모닉을 사용하시겠습니까?</string>
+    <string name="cancel">취소</string>
+    <string name="text_continue">계속</string>
+    <string name="password_repeat_error">비밀번호가 일치하지 않습니다.</string>
+    <string name="at_least_8_word">비밀번호는 8자리 이상으로 설정해주세요.</string>
+    <string name="log_out_wallet_title">지갑 작성</string>
+    <string name="log_out_wallet_tips">지갑 복구 구절을 백업하셨나요?\n복구 구절이 없으면 계정에 다시 로그인할 수 없습니다.</string>
+    <string name="continue_input">계속</string>
+    <string name="qr_cod_tips">(거래 시 확인에 사용됨)</string>
+
+    <!--settings start-->
+    <string name="setting_label">설정</string>
+    <string name="setting_wallet_manage">지갑 관리</string>
+    <string name="setting_backup_word">니모닉 백업</string>
+    <string name="setting_back_up_now">지금 백업</string>
+    <string name="setting_auto_backup">자동 백업</string>
+    <string name="setting_auto_backup_tips">지갑의 변경 내용을 자동으로 백업</string>
+    <string name="setting_safety_manage">보안 관리</string>
+    <string name="setting_network_monitor">모니터 연결</string>
+    <string name="setting_network_monitor_tips">WiFi, 데이터 및 블루투스 확인</string>
+    <string name="setting_others">기타</string>
+    <string name="setting_about_us">회사소개</string>
+    <string name="setting_logout">지갑 제거</string>
+    <!--settings end-->
+
+    <!--wallet start-->
+    <string name="wallet_my_wallet">지갑</string>
+    <string name="wallet_backup">지갑 백업</string>
+    <string name="wallet_backup_later">나중에 백업</string>
+    <string name="wallet_create">지갑 생성</string>
+    <string name="wallet_import">지갑 불러오기</string>
+    <string name="wallet_word_import">니모닉 단어로 지갑 불러오기</string>
+    <string name="wallet_backup_word_import">네이티브 백업 불러오기</string>
+    <string name="wallet_backup_word_import_tips">백업된 지갑 1개가 감지되었습니다.</string>
+    <string name="wallet_label">지갑</string>
+    <string name="wallet_add_more_account">계정 추가</string>
+    <string name="wallet_no_backup_tips">로컬 백업을 찾을 수 없습니다. 니모닉을 사용하여 지갑 불러오기를 진행해주세요.</string>
+    <!--wallet end-->
+
+    <!--wallet create start-->
+    <string name="wallet_set_password">비밀번호 설정</string>
+    <string name="wallet_create_tips">Walk Wallet은 사용자의 비밀번호를 저장하지 않습니다. 분실할 경우 찾을 수 없기 때문에 잘 보관해주세요.</string>
+    <string name="wallet_create_password_label">지갑 비밀번호 생성</string>
+    <string name="wallet_create_password_tips">최소 8자를 입력해주세요.</string>
+    <string name="wallet_create_confirm_password_label">지갑 비밀번호 확인</string>
+    <string name="wallet_create_confirm_password_tips">입력해주세요.</string>
+    <string name="wallet_create_password_weak_label">비밀번호가 너무 약합니다.</string>
+    <string name="wallet_create_password_weak_tips">지갑 보안을 위해 비밀번호 보안 수준이 "좋음" 이상이어야 합니다.</string>
+    <string name="wallet_reset_password">비밀번호 재설정</string>
+    <string name="wallet_continue_create">생성 성공</string>
+    <string name="password_strength_0"> </string>
+    <string name="password_strength_1">약함</string>
+    <string name="password_strength_2">적당함</string>
+    <string name="password_strength_3">좋음</string>
+    <string name="password_strength_4">강력함</string>
+    <string name="password_strength_5">완벽함</string>
+    <string name="wallet_number">계정 %1$d</string>
+    <string name="wallet_address">계정 %1$d 주소</string>
+    <string name="wallet_password_create_success_label">성공적으로 생성되었습니다.</string>
+    <string name="wallet_password_create_success_tips">지갑을 즉시 백업하는 것을 추천드립니다.</string>
+    <!--wallet create end-->
+
+    <!--seed start-->
+    <string name="word_import_label">니모닉 단어는 15개이며, 띄어쓰기에 유의해주세요.</string>
+    <string name="word_import_hint">입력해주세요.</string>
+    <string name="word_backup_tips">스크린샷은 다른 어플리케이션에서 사용될 우려가 있어 안전하지 않습니다. 종이와 펜을 이용해 니모닉 단어를 잘 보관해주세요. 다음 단계에서 니모닉 단어 확인이 필요합니다. </string>
+    <string name="word_confirm">니모닉 단어를 순서대로 잘 보관했습니다.</string>
+    <string name="word_backup_success">백업 완료</string>
+    <string name="word_backup_success_tips">니모닉 단어를 잘 보관해주세요.</string>
+    <string name="word_input_in_order">확인을 위해 니모닉 단어를 순서대로 눌러주세요.</string>
+    <string name="word_backup_word">니모닉 백업</string>
+    <!--seed end-->
+
+    <!-- scan start -->
+    <string name="sender_not_found">보낸 사람을 찾을 수 없습니다.</string>
+    <string name="unsupported_qrcode">지원하지 않는 QR 코드 유형입니다.</string>
+    <!-- scan end -->
+
+    <!--confirm transaction start-->
+    <string name="confirmtx_title">거래내역 보기 </string>
+    <string name="confirmtx_tip">다음 트랜잭션 정보를 자세히 확인해주세요.</string>
+    <string name="confirmtx_item_my_address">보내는 사람: </string>
+    <string name="confirmtx_item_send_to">받는 사람: </string>
+    <string name="confirmtx_item_lease_to">받는 사람: </string>
+    <string name="confirmtx_item_type">유형</string>
+    <string name="confirmtx_item_amount">수량</string>
+    <string name="confirmtx_item_fee">수수료</string>
+    <string name="confirmtx_item_time">시간</string>
+    <string name="confirmtx_item_attachment">설명</string>
+    <string name="confirmtx_dialog_title">트랜잭션 확인</string>
+    <string name="confirmtx_dialog_tip">핫 월렛에서 QR 코드를 스캔하여 서명을 확인해주세요.</string>
+    <!--confirm transaction end-->
+
+    <!-- home start-->
+    <string name="home_add_account_dialog_title">새 계정 추가</string>
+    <string name="home_add_account_dialog_msg">삭제할 수 없는 새 계정을 추가합니다. 정말 추가하시겠습니까?</string>
+    <!-- home end -->
+
+    <!--network start-->
+    <string name="network_environment">네트워크</string>
+    <string name="network_warning">지갑이 성공적으로 생성되면 네트워크를 변경할 수 없습니다.</string>
+    <string name="network_main_net">메인넷</string>
+    <string name="network_test_net">테스트넷</string>
+    <string name="network_main_net_caption">안전한 네트워크 환경에서는 실제 VSYS 자산을 안전하게 저장할 수 있습니다. 현재 환경은 일반 사용자의 사용을 위한 환경입니다.</string>
+    <string name="network_test_net_caption">테스트 네트워크 환경에서는 실제 VSYS 자산을 안전하게 저장할 수 없습니다. 현재 환경은 개발자의 시뮬레이션 테스트를 위한 환경입니다. 만약 전문적인 개발자가 아니라면 공식 네트워크 환경에서 사용하신것을 추천드립니다.</string>
+    <string name="network_switch_to_test_net">개발자 테스트 환경으로 전환하려면 클릭해주세요.</string>
+    <string name="network_switch_to_main_net">정식 환경으로 다시 전환하려면 클릭해주세요.</string>
+    <string name="network_switch_warning">테스트 환경은 개발자가 테스트하는 경우에만 사용할 수 있습니다. 정말 사용하시겠습니까?</string>
+    <!--network end-->
+
+    <!--monitor start-->
+    <string name="monitor_title">네트워크 연결 모니터링</string>
+    <string name="monitor_caption">네트워크 데이터 연결돤 경우 콜드 월렛이 해킹되어 도난당할 위험이 크므로 개인 자산의 보안을 위해 사용 시 모든 데이터 네트워크를 차단하시고 사용해주세요.</string>
+    <string name="monitor_wifi">와이파이</string>
+    <string name="monitor_mobile_data">모바일 데이터</string>
+    <string name="monitor_bluetooth">블루투스</string>
+    <string name="monitor_recheck">새로고침</string>
+    <string name="monitor_connected">연결됨</string>
+    <string name="monitor_unconnected">연결되지 않음</string>
+    <!--monitor end-->
+
+    <!--init start-->
+    <string name="wallet_init_official_warning_dialog_msg">개인 자산의 보안을 위해 현재 지갑이 VSYS 공식 웹사이트 시스템에서 다운로드한 것인지 확인해주세요.</string>
+    <!--init end-->
+</resources>
