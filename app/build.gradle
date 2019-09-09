@@ -6,8 +6,8 @@ android {
         applicationId "systems.v.wallet.cold"
         minSdkVersion versions.min_sdk
         targetSdkVersion versions.target_sdk
-        versionCode 4
-        versionName "1.0.4"
+        versionCode 3
+        versionName "1.0.3"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -32,7 +32,6 @@ dependencies {
     implementation deps.support.material
     implementation deps.constraintlayout
     implementation deps.vectordrawable
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     testImplementation deps.junit
     androidTestImplementation deps.atsl.runner
     androidTestImplementation deps.espresso.core

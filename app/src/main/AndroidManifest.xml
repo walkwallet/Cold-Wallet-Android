@@ -32,7 +32,7 @@
         android:required="false" />
 
     <application
-        android:name=".App"
+        android:name="systems.v.coldwallet.App"
         android:allowBackup="false"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
@@ -41,7 +41,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.view.SplashActivity"
+            android:name="systems.v.coldwallet.ui.view.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Splash">
             <intent-filter>
@@ -51,54 +51,54 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.view.wallet.WalletInitActivity"
+            android:name="systems.v.coldwallet.ui.view.wallet.WalletInitActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Splash" />
         <activity
-            android:name=".ui.view.VerifyActivity"
+            android:name="systems.v.coldwallet.ui.view.VerifyActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.Splash" />
+
         <activity
-            android:name=".ui.view.wallet.SetPasswordActivity"
+            android:name="systems.v.coldwallet.ui.view.wallet.SetPasswordActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.view.wallet.GenerateSeedActivity"
+            android:name="systems.v.coldwallet.ui.view.wallet.GenerateSeedActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.view.ScannerActivity"
+            android:name="systems.v.coldwallet.ui.view.ScannerActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.view.wallet.TipsActivity"
+            android:name="systems.v.coldwallet.ui.view.wallet.TipsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.view.wallet.ImportSeedActivity"
+            android:name="systems.v.coldwallet.ui.view.wallet.ImportSeedActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.view.wallet.ConfirmSeedActivity"
+            android:name="systems.v.coldwallet.ui.view.wallet.ConfirmSeedActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.view.MonitorActivity"
+            android:name="systems.v.coldwallet.ui.view.MonitorActivity"
             android:launchMode="singleInstance"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.view.wallet.BackupSuccessActivity"
+            android:name="systems.v.coldwallet.ui.view.wallet.BackupSuccessActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.view.main.MainActivity"
+            android:name="systems.v.coldwallet.ui.view.main.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.view.main.AboutActivity"
+            android:name="systems.v.coldwallet.ui.view.main.AboutActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.view.wallet.NetworkActivity"
+            android:name="systems.v.coldwallet.ui.view.wallet.NetworkActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.view.ConfirmTxActivity"
+            android:name="systems.v.coldwallet.ui.view.ConfirmTxActivity"
             android:screenOrientation="portrait" />
 
-        <service android:name=".service.BackupService" />
 
-        <activity android:name=".ui.view.PageScanActivity"></activity>
+        <service android:name="systems.v.coldwallet.service.BackupService" />
     </application>
 
 </manifest>
