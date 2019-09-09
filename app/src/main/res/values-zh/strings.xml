@@ -20,6 +20,8 @@
     <string name="not_office_seed_tips">这是一个非官方来源的助记词，未知来源的助记词可能使您的资产完全丢失。仍然使用该助记词？</string>
     <string name="cancel">取消</string>
     <string name="text_continue">继续</string>
+    <string name="text_back">后退</string>
+
     <string name="password_repeat_error">两次密码输入不一致</string>
     <string name="at_least_8_word">至少8个字符</string>
     <string name="log_out_wallet_title">注销钱包</string>
@@ -93,6 +95,7 @@
     <!-- scan start -->
     <string name="sender_not_found">没有找到发送这笔交易的账户</string>
     <string name="unsupported_qrcode">不支持的二维码类型</string>
+    <string name="wrong_qrcode">错误的二维码</string>
     <!-- scan end -->
 
     <!--confirm transaction start-->
@@ -103,6 +106,9 @@
     <string name="confirmtx_item_lease_to">租出地址</string>
     <string name="confirmtx_item_type">类型</string>
     <string name="confirmtx_item_amount">数量</string>
+    <string name="confirmtx_item_explain">解释</string>
+    <string name="confirmtx_item_contract_id">合约 Id</string>
+    <string name="confirmtx_item_function_id">方法 Id</string>
     <string name="confirmtx_item_fee">手续费</string>
     <string name="confirmtx_item_time">时间</string>
     <string name="confirmtx_item_attachment">备注</string>
@@ -141,4 +147,9 @@
     <!--init start-->
     <string name="wallet_init_official_warning_dialog_msg">为保证您的个人财产安全，请务必确保您的钱包APP来自VSYS官方网站v.systems下载</string>
     <!--init end-->
+
+    <string name="page_scan_title">分页二维码扫描</string>
+    <string name="page_scan_tip">请按照顺序扫描二维码</string>
+    <string name="page_scan_page">当前页数: %1$s/ 总页数: %2$s</string>
+
 </resources>

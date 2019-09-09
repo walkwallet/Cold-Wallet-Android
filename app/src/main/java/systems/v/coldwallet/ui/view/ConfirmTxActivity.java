@@ -19,11 +19,13 @@ import systems.v.coldwallet.databinding.ActivityConfirmTxBinding;
 import systems.v.coldwallet.databinding.ItemTxInfoBinding;
 import systems.v.coldwallet.ui.BaseActivity;
 import systems.v.coldwallet.utils.UIUtil;
+import systems.v.wallet.basic.utils.Base58;
 import systems.v.wallet.basic.utils.CoinUtil;
 import systems.v.wallet.basic.utils.QRCodeUtil;
 import systems.v.wallet.basic.utils.TxUtil;
 import systems.v.wallet.basic.wallet.Account;
 import systems.v.wallet.basic.wallet.Transaction;
+import vsys.Contract;
 
 public class ConfirmTxActivity extends BaseActivity {
 
@@ -44,7 +46,13 @@ public class ConfirmTxActivity extends BaseActivity {
 
         String txStr = getIntent().getStringExtra("tx");
         final Transaction tx = JSON.parseObject(txStr, Transaction.class);
-        final Account sender = mApp.getWallet().getAccount(tx.getSenderPublicKey());
+        final Account sender;
+        if(tx.getSenderPublicKey() != null && !tx.getSenderPublicKey().isEmpty()){
+            sender = mApp.getWallet().getAccount(tx.getSenderPublicKey());
+        }else{
+            sender = mApp.getWallet().getAccountByAddress(tx.getAddress());
+        }
+
         initView(tx, sender);
         mBinding.tvConfirm.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,26 +75,49 @@ public class ConfirmTxActivity extends BaseActivity {
         mBinding.llInfo.removeAllViews();
         int type = tx.getTransactionType();
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd  HH:mm:ss");
-
-        addItem(R.string.confirmtx_item_my_address, sender.getAddress());
-
-        int titleId = type == Transaction.PAYMENT
-                ? R.string.confirmtx_item_send_to : R.string.confirmtx_item_lease_to;
-        addItem(titleId, tx.getRecipient());
-
-        addItem(R.string.confirmtx_item_type, TxUtil.getTypeText(this, type));
-
-        if (type == Transaction.PAYMENT || type == Transaction.LEASE) {
-            String amount = CoinUtil.formatWithUnit(tx.getAmount());
-            addItem(R.string.confirmtx_item_amount, amount);
-        }
         String fee = CoinUtil.formatWithUnit(tx.getFee());
-        addItem(R.string.confirmtx_item_fee, fee);
         String time = dateFormat.format(new Date(tx.getTimestamp()));
-        addItem(R.string.confirmtx_item_time, String.format("%s (%s)", time, TimeZone.getDefault().getDisplayName()));
-        if (type == Transaction.PAYMENT && !TextUtils.isEmpty(tx.getAttachment())) {
-            addItem(R.string.confirmtx_item_attachment,
-                    TxUtil.decodeAttachment(tx.getAttachment()));
+        switch (type) {
+            case Transaction.CONTRACT_REGISTER:
+                addItem(R.string.confirmtx_item_my_address, sender.getAddress());
+                addItem(R.string.confirmtx_item_type, TxUtil.getTypeText(this, type));
+                addItem(R.string.confirmtx_item_time, String.format("%s (%s)", time, TimeZone.getDefault().getDisplayName()));
+                addItem(R.string.confirmtx_item_fee, fee);
+                if (!TextUtils.isEmpty(tx.getDescription())) {
+                    addItem(R.string.confirmtx_item_attachment, tx.getDescription());
+                }
+                addItem(R.string.confirmtx_item_explain, tx.getContractInitExplain());
+                break;
+            case Transaction.CONTRACT_EXECUTE:
+                addItem(R.string.confirmtx_item_my_address, sender.getAddress());
+                addItem(R.string.confirmtx_item_type, TxUtil.getTypeText(this, type));
+                addItem(R.string.confirmtx_item_time, String.format("%s (%s)", time, TimeZone.getDefault().getDisplayName()));
+                addItem(R.string.confirmtx_item_fee, fee);
+                addItem(R.string.confirmtx_item_contract_id, tx.getContractId());
+                addItem(R.string.confirmtx_item_function_id, Short.toString(tx.getFunctionId()));
+                if (!TextUtils.isEmpty(tx.getAttachment())) {
+                    addItem(R.string.confirmtx_item_attachment, tx.getAttachment());
+                }
+                addItem(R.string.confirmtx_item_explain, tx.getFunctionExplain());
+                break;
+            default:
+                addItem(R.string.confirmtx_item_my_address, sender.getAddress());
+
+                int titleId = type == Transaction.PAYMENT
+                        ? R.string.confirmtx_item_send_to : R.string.confirmtx_item_lease_to;
+                addItem(titleId, tx.getRecipient());
+
+                addItem(R.string.confirmtx_item_type, TxUtil.getTypeText(this, type));
+
+                if (type == Transaction.PAYMENT || type == Transaction.LEASE) {
+                    String amount = CoinUtil.formatWithUnit(tx.getAmount());
+                    addItem(R.string.confirmtx_item_amount, amount);
+                }
+                addItem(R.string.confirmtx_item_fee, fee);
+                addItem(R.string.confirmtx_item_time, String.format("%s (%s)", time, TimeZone.getDefault().getDisplayName()));
+                if (type == Transaction.PAYMENT && !TextUtils.isEmpty(tx.getAttachment())) {
+                    addItem(R.string.confirmtx_item_attachment, tx.getAttachment());
+                }
         }
     }
 

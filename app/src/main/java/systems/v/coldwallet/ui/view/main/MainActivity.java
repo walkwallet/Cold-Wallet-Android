@@ -13,6 +13,7 @@ import com.alibaba.fastjson.JSON;
 import com.google.android.material.tabs.TabLayout;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
+import com.journeyapps.barcodescanner.Util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,10 +29,13 @@ import systems.v.coldwallet.R;
 import systems.v.coldwallet.databinding.ActivityMainBinding;
 import systems.v.coldwallet.ui.BaseActivity;
 import systems.v.coldwallet.ui.view.ConfirmTxActivity;
+import systems.v.coldwallet.ui.view.PageScanActivity;
 import systems.v.coldwallet.ui.view.main.fragment.SettingFragment;
 import systems.v.coldwallet.ui.view.main.fragment.WalletFragment;
 import systems.v.coldwallet.utils.UIUtil;
 import systems.v.wallet.basic.utils.JsonUtil;
+import systems.v.wallet.basic.utils.QRCodeUtil;
+import systems.v.wallet.basic.utils.TxUtil;
 import systems.v.wallet.basic.wallet.Account;
 import systems.v.wallet.basic.wallet.Operation;
 import systems.v.wallet.basic.wallet.Transaction;
@@ -62,32 +66,96 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-        if (result != null && result.getContents() != null) {
-            String qrContents = result.getContents();
-            if (!JsonUtil.isJsonString(qrContents)) {
-                Log.w(TAG, "scan result is unsupported transaction");
-                UIUtil.showUnsupportQrCodeDialog(this);
-                return;
-            }
+        if(resultCode == RESULT_CANCELED){
+            return;
+        }
+        String qrContents = "";
+        switch (requestCode) {
+            case IntentIntegrator.REQUEST_CODE:
+                if(data == null){
+                    UIUtil.showUnsupportQrCodeDialog(MainActivity.this);
+                    return ;
+                }
+                IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+                if (result != null && result.getContents() != null) {
+                    qrContents = result.getContents();
+                    Log.d(TAG, "scan result is " + qrContents);
+                }
+            break;
+            case PageScanActivity.REQUEST_CODE:
+                if (resultCode == Activity.RESULT_OK && data != null) {
+                    qrContents = data.getStringExtra(PageScanActivity.RESULT);
+                    Log.d(TAG, "page scan result is " + qrContents);
+                }
+            break;
+        }
+        if (JsonUtil.isJsonString(qrContents)) {
             Operation op = Operation.parse(qrContents);
-            if (op == null || !op.validate(Operation.TRANSACTION)) {
+            if (op == null) {
                 UIUtil.showUnsupportQrCodeDialog(this);
                 return;
             }
-            Transaction tx = JSON.parseObject(qrContents, Transaction.class);
-            if (tx == null || !Transaction.validate(tx.getTransactionType())) {
-                Log.w(TAG, "scan result is unsupported transaction");
+            if (op.validate(Operation.TRANSACTION)) {
+                Transaction tx = JSON.parseObject(qrContents, Transaction.class);
+                if (tx == null || !Transaction.validate(tx.getTransactionType())) {
+                    Log.w(TAG, "scan result is unsupported transaction");
+                    UIUtil.showUnsupportQrCodeDialog(this);
+                    return;
+                }
+                Account sender = mWallet.getAccount(tx.getSenderPublicKey());
+
+                if (sender == null) {
+                    UIUtil.showSenderNotFoundDialog(this);
+                    return;
+                }
+
+                ConfirmTxActivity.launch(this, tx);
+            } else if(op.validate(Operation.CONTRACT)){
+                Transaction tx = JSON.parseObject(qrContents, Transaction.class);
+                if (tx == null) {
+                    Log.w(TAG, "scan result is unsupported transaction");
+                    UIUtil.showUnsupportQrCodeDialog(this);
+                    return;
+                }
+                Account sender = mWallet.getAccountByAddress(tx.getAddress());
+
+                if (sender == null) {
+                    UIUtil.showSenderNotFoundDialog(this);
+                    return;
+                }
+                tx.setTransactionType(Transaction.CONTRACT_REGISTER);
+
+                ConfirmTxActivity.launch(this, tx);
+            } else if(op.validate(Operation.FUNCTION)){
+                Transaction tx = JSON.parseObject(qrContents, Transaction.class);
+                if (tx == null) {
+                    Log.w(TAG, "scan result is unsupported transaction");
+                    UIUtil.showUnsupportQrCodeDialog(this);
+                    return;
+                }
+                Account sender = mWallet.getAccountByAddress(tx.getAddress());
+
+                if (sender == null) {
+                    UIUtil.showSenderNotFoundDialog(this);
+                    return;
+                }
+                tx.setTransactionType(Transaction.CONTRACT_EXECUTE);
+                tx.setAttachment(TxUtil.decodeAttachment(tx.getAttachment()));
+                ConfirmTxActivity.launch(this, tx);
+            } else {
                 UIUtil.showUnsupportQrCodeDialog(this);
                 return;
             }
-            Account sender = mWallet.getAccount(tx.getSenderPublicKey());
-            if (sender == null) {
-                UIUtil.showSenderNotFoundDialog(this);
+        } else if (qrContents.startsWith(QRCodeUtil.Prefix)) {
+            if(!qrContents.startsWith(QRCodeUtil.Prefix+ "1/")){
+                UIUtil.showWrongQrCodeDialog(this);
                 return;
             }
-            Log.d(TAG, "scan result is " + qrContents);
-            ConfirmTxActivity.launch(this, tx);
+            PageScanActivity.launch(this, qrContents);
+        } else {
+            Log.w(TAG, "scan result is unsupported transaction");
+            UIUtil.showUnsupportQrCodeDialog(this);
+            return;
         }
     }
 

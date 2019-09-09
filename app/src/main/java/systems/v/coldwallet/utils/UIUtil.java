@@ -27,6 +27,13 @@ public class UIUtil {
                 .show();
     }
 
+    public static void showWrongQrCodeDialog(final Activity activity) {
+        new AlertDialog.Builder(activity)
+                .setMessage(R.string.wrong_qrcode)
+                .setPositiveButton(R.string.confirm, null)
+                .show();
+    }
+
     public static void showSenderNotFoundDialog(final Activity activity) {
         new AlertDialog.Builder(activity)
                 .setMessage(R.string.sender_not_found)
