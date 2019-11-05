@@ -102,6 +102,11 @@ public class MainActivity extends BaseActivity {
                     UIUtil.showUnsupportQrCodeDialog(this);
                     return;
                 }
+                if (tx.getInvoice() != null && !tx.getInvoice().isEmpty() &&
+                        (tx.getAttachment() == null || tx.getAttachment().isEmpty())){
+                    tx.setAttachment(tx.getInvoice());
+                }
+
                 Account sender = mWallet.getAccount(tx.getSenderPublicKey());
 
                 if (sender == null) {
@@ -132,6 +137,10 @@ public class MainActivity extends BaseActivity {
                     Log.w(TAG, "scan result is unsupported transaction");
                     UIUtil.showUnsupportQrCodeDialog(this);
                     return;
+                }
+                if (tx.getInvoice() != null && !tx.getInvoice().isEmpty() &&
+                        (tx.getAttachment() == null || tx.getAttachment().isEmpty())){
+                    tx.setAttachment(tx.getInvoice());
                 }
                 Account sender = mWallet.getAccountByAddress(tx.getAddress());
 
