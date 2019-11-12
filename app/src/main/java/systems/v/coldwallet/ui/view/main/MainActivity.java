@@ -32,6 +32,7 @@ import systems.v.coldwallet.ui.view.ConfirmTxActivity;
 import systems.v.coldwallet.ui.view.PageScanActivity;
 import systems.v.coldwallet.ui.view.main.fragment.SettingFragment;
 import systems.v.coldwallet.ui.view.main.fragment.WalletFragment;
+import systems.v.coldwallet.utils.ToastUtil;
 import systems.v.coldwallet.utils.UIUtil;
 import systems.v.wallet.basic.utils.JsonUtil;
 import systems.v.wallet.basic.utils.QRCodeUtil;
@@ -39,6 +40,7 @@ import systems.v.wallet.basic.utils.TxUtil;
 import systems.v.wallet.basic.wallet.Account;
 import systems.v.wallet.basic.wallet.Operation;
 import systems.v.wallet.basic.wallet.Transaction;
+import vsys.Vsys;
 
 public class MainActivity extends BaseActivity {
 
@@ -93,6 +95,10 @@ public class MainActivity extends BaseActivity {
             Operation op = Operation.parse(qrContents);
             if (op == null) {
                 UIUtil.showUnsupportQrCodeDialog(this);
+                return;
+            }
+            if (op.getApi() > Vsys.Api){
+                ToastUtil.showLongToast(getString(R.string.qr_need_update));
                 return;
             }
             if (op.validate(Operation.TRANSACTION)) {

@@ -27,6 +27,7 @@
     <string name="log_out_wallet_tips">Have you recorded your wallet Recovery phrase?\nWithout this you will not be able to sign back in to your account.</string>
     <string name="continue_input">Continue</string>
     <string name="qr_cod_tips">(only for verifying when make transactions)</string>
+    <string name="qr_need_update">Unsupported types, please upgrade the current Wallet</string>
 
     <!--settings start-->
     <string name="setting_label">Settings</string>

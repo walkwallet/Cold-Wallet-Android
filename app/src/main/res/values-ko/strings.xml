@@ -26,6 +26,7 @@
     <string name="log_out_wallet_tips">지갑 복구 구절을 백업하셨나요?\n복구 구절이 없으면 계정에 다시 로그인할 수 없습니다.</string>
     <string name="continue_input">계속</string>
     <string name="qr_cod_tips">(거래 시 확인에 사용됨)</string>
+    <string name="qr_need_update">지원되지 않는 유형입니다. 현재 월렛을 업그레이드하십시오.</string>
 
     <!--settings start-->
     <string name="setting_label">설정</string>

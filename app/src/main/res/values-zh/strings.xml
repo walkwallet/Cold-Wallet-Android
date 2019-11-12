@@ -21,6 +21,7 @@
     <string name="cancel">取消</string>
     <string name="text_continue">继续</string>
     <string name="text_back">后退</string>
+    <string name="qr_need_update">不支持的类型，请升级当前钱包</string>
 
     <string name="password_repeat_error">两次密码输入不一致</string>
     <string name="at_least_8_word">至少8个字符</string>
