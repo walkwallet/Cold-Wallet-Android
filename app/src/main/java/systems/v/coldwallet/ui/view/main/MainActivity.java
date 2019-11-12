@@ -114,6 +114,7 @@ public class MainActivity extends BaseActivity {
                     return;
                 }
 
+                tx.setAttachment(TxUtil.decodeAttachment(tx.getAttachment()));
                 ConfirmTxActivity.launch(this, tx);
             } else if(op.validate(Operation.CONTRACT)){
                 Transaction tx = JSON.parseObject(qrContents, Transaction.class);
