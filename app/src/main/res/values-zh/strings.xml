@@ -91,6 +91,7 @@
     <string name="word_backup_success_tips">请妥善保管你的助记词</string>
     <string name="word_input_in_order">按顺序点击助记词，确认你的助记词备份正确</string>
     <string name="word_backup_word">备份助记词</string>
+    <string name="word_backup_word_export_qrcode">导出助记词二维码</string>
     <!--seed end-->
 
     <!-- scan start -->

@@ -76,6 +76,19 @@
                     android:layout_weight="1" />
 
                 <TextView
+                    android:id="@+id/tv_export_qrcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"
+                    android:text="@string/word_backup_word_export_qrcode"
+                    android:background="@drawable/bg_theme_black_radius_6"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
                     android:id="@+id/tv_next"
                     android:layout_width="match_parent"
                     android:layout_height="48dp"

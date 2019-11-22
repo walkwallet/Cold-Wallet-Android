@@ -123,7 +123,9 @@ public class ImportSeedActivity extends BaseActivity {
             Log.d(TAG, "scan result is " + qrContents);
             try {
                 Operation op = Operation.parse(qrContents);
-                if (op.validate(Operation.SEED)) {
+                if (op == null) {
+                    mBinding.etWord.setText(qrContents);
+                }else if(op.validate(Operation.SEED)) {
                     String seed = (String) op.get("seed");
                     mBinding.etWord.setText(seed);
                 }

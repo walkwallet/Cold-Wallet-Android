@@ -15,7 +15,11 @@ import android.widget.TextView;
 
 import java.util.Objects;
 
+import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
+
+import org.w3c.dom.Text;
+
 import systems.v.coldwallet.R;
 import systems.v.wallet.basic.utils.QRCodeUtil;
 
@@ -42,6 +46,10 @@ public class UIUtil {
     }
 
     public static void showSignatureDialog(final Activity activity, String msg) {
+        showQRCodeDialog(activity, msg, R.string.confirmtx_dialog_title, R.string.confirmtx_dialog_tip);
+    }
+
+    public static void showQRCodeDialog(final Activity activity, String msg, @StringRes int title, @StringRes int tips){
         final Dialog dialog = new Dialog(activity, R.style.Dialog);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_signature);
@@ -68,9 +76,23 @@ public class UIUtil {
         tvComplete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                dialog.dismiss();
                 activity.finish();
             }
         });
+        TextView tvTitle = dialog.findViewById(R.id.tv_title);
+        TextView tvTips = dialog.findViewById(R.id.tv_tips);
+        if(title == 0) {
+            tvTitle.setVisibility(View.GONE);
+        }else{
+            tvTitle.setText(title);
+        }
+        if(tips == 0) {
+            tvTips.setVisibility(View.GONE);
+        }else{
+            tvTips.setText(title);
+        }
+
         dialog.show();
     }
 

@@ -89,6 +89,7 @@
     <string name="word_backup_success_tips">니모닉 단어를 잘 보관해주세요.</string>
     <string name="word_input_in_order">확인을 위해 니모닉 단어를 순서대로 눌러주세요.</string>
     <string name="word_backup_word">니모닉 백업</string>
+    <string name="word_backup_word_export_qrcode">키워드 QR코드 생성하기</string>
     <!--seed end-->
 
     <!-- scan start -->

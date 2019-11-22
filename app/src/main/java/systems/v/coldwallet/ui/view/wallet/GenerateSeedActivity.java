@@ -9,6 +9,8 @@ import androidx.databinding.DataBindingUtil;
 import systems.v.coldwallet.R;
 import systems.v.coldwallet.databinding.ActivityGenerateSeedBinding;
 import systems.v.coldwallet.ui.BaseActivity;
+import systems.v.coldwallet.utils.UIUtil;
+import systems.v.wallet.basic.utils.QRCodeUtil;
 
 public class GenerateSeedActivity extends BaseActivity {
 
@@ -46,6 +48,12 @@ public class GenerateSeedActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 ConfirmSeedActivity.launch(mActivity, mSeeds);
+            }
+        });
+        mBinding.tvExportQrcode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UIUtil.showQRCodeDialog(GenerateSeedActivity.this, QRCodeUtil.getSeedStr(mSeeds), 0, 0);
             }
         });
         mBinding.ivBack.setOnClickListener(new View.OnClickListener() {

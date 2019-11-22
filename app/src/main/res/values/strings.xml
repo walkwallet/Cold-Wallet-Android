@@ -90,6 +90,7 @@
     <string name="word_backup_success_tips">Please keep your mnemonic words carefully</string>
     <string name="word_input_in_order">Click on the mnemonic words orderly to confirm.</string>
     <string name="word_backup_word">Back up mnemonics</string>
+    <string name="word_backup_word_export_qrcode">Export mnemonics QR Code</string>
     <!--seed end-->
 
     <!-- scan start -->
